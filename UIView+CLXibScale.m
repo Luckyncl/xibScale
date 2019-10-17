@@ -52,10 +52,11 @@ static char ForceNoScaleKeyForCons;   // 是否强制保持约束不改变
 
 
 - (void)CLAwakeFromNib{
-    
     if (self.superview && self.superview.byScale) {
         self.byScale = self.superview.byScale;
-        
+    }
+    
+    if (self.byScale) {
         if (self.forceNoScale) {
             // 强制不跟新
         }else{
